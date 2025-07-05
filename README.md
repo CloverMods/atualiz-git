@@ -24,4 +24,4 @@ const GithubApiUpdater = require('AtualizGit');
   await updater.verificarEbaixar();
 })();
 
-``
+```
