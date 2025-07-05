@@ -1,26 +1,15 @@
-/* @CLOVERMYT */
-
-// Canal: https://youtube.com/@clovermyt
-
-// Canal WhatsApp: https://whatsapp.com/channel/0029Va974hY2975B61INGX3Q
-
-// Instagram: https://www.instagram.com/clovermods?igsh=MmcyMHlrYnhoN2Zk
-
-// Telegram: t.me/cinco_folhas
-
-// Comunidade WhatsApp: https://chat.whatsapp.com/Kc5HLGCIokb37mA36NJrM6
-
 const https = require('https');
 const fs = require('fs');
+const path = require('path');
 
 class GithubApiUpdater {
-  constructor({ owner, repo, path, branch = 'main', destino }) {
+  constructor({ owner, repo, path: filePath, branch = 'main', destino }) {
     this.owner = owner;
     this.repo = repo;
-    this.path = path; 
+    this.path = filePath;
     this.branch = branch;
     this.destino = destino;
-    this.metaFile = `./saves/${destino}.meta.json`; // arquivo para guardar sha
+    this.metaFile = path.resolve(process.cwd(), 'saves', `${destino}.meta.json`);
   }
 
   getMeta() {
@@ -29,6 +18,9 @@ class GithubApiUpdater {
   }
 
   saveMeta(data) {
+    const dir = path.dirname(this.metaFile);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+
     fs.writeFileSync(this.metaFile, JSON.stringify(data, null, 2));
   }
 
@@ -71,8 +63,8 @@ class GithubApiUpdater {
 
       const remoteSha = fileInfo.sha;
       const localSha = meta.sha;
-      
-      console.log("Verificando Atualizações")
+
+      console.log("Verificando Atualizações");
       console.log(`Remote SHA: ${remoteSha}`);
       console.log(`Local SHA : ${localSha || 'N/A'}`);
 

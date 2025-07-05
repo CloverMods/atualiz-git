@@ -6,7 +6,7 @@
   </a>
 </center>
 
-# AtualizGit V1.0.0
+# AtualizGit V1.0.2
 By: @clovermyt
 
 # Como Usar
