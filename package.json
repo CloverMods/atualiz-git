@@ -1,6 +1,6 @@
 {
   "name": "atualiz-git",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "atualizar arquivos específicos postados no github para dentro de seu código automaticamente ou manualmente",
   "main": "index.js",
   "repository": "https://nada_ainda",
