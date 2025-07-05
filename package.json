@@ -1,0 +1,14 @@
+{
+  "name": "atualiz-git",
+  "version": "1.0.0",
+  "description": "atualizar arquivos específicos postados no github para dentro de seu código automaticamente ou manualmente",
+  "main": "index.js",
+  "repository": "https://nada_ainda",
+  "author": "@clovermyt",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "path": "^0.12.7"
+  }
+}
