@@ -11,7 +11,7 @@ By: @clovermyt
 
 # Como Usar
 
-<h3>Exemplo para atualizado um só arquivo:</h3>
+Exemplo para atualizado um só arquivo:
 ```
 const GithubApiUpdater = require('atualiz-git');
 
@@ -28,7 +28,7 @@ const GithubApiUpdater = require('atualiz-git');
 
 ```
 
-<h3>Exemplo de como atualizar mais de um arquivo de uma vez:</h3>
+Exemplo de como atualizar mais de um arquivo de uma vez:
 ```
 const GithubApiUpdater = require('atualiz-git');
 
@@ -57,5 +57,5 @@ const GithubApiUpdater = require('atualiz-git');
   console.log('Todos os arquivos verificados!');
 })();
 ```
-<hr>
+
 
